@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ELECTRO SHOP</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header id="mainHeader">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+      <span class="logo-text" data-en="ELECTRO SHOP" data-bn="ইলেক্ট্রো শপ">ELECTRO SHOP</span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+      <a href="#products" data-en="Products" data-bn="পণ্য">Products</a>
+      <a href="#services" data-en="Services" data-bn="সেবা">Services</a>
+      <a href="#cart" data-en="Cart" data-bn="কার্ট">Cart</a>
+      <a href="#contact" data-en="Contact" data-bn="যোগাযোগ">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-btn" id="langToggle" onclick="toggleLang()">বাংলা</button>
+      <button class="cart-btn" onclick="scrollToCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-en="🔥 Best Deals in Bangladesh" data-bn="🔥 বাংলাদেশের সেরা অফার">🔥 Best Deals in Bangladesh</div>
+    <h1 class="hero-title" data-en="ELECTRO<br><span>SHOP</span>" data-bn="ইলেক্ট্রো<br><span>শপ</span>">ELECTRO<br><span>SHOP</span></h1>
+    <p class="hero-sub" data-en="Your One-Stop Digital Marketplace — Products, Services & More!" data-bn="আপনার সম্পূর্ণ ডিজিটাল মার্কেটপ্লেস — পণ্য, সেবা এবং আরও অনেক কিছু!">Your One-Stop Digital Marketplace — Products, Services & More!</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary" data-en="Shop Now" data-bn="এখনই কিনুন">Shop Now</a>
+      <a href="#services" class="btn-outline" data-en="Our Services" data-bn="আমাদের সেবা">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">500+</span><span class="stat-label" data-en="Products" data-bn="পণ্য">Products</span></div>
+    <div class="stat"><span class="stat-num">24/7</span><span class="stat-label" data-en="Support" data-bn="সাপোর্ট">Support</span></div>
+    <div class="stat"><span class="stat-num">10k+</span><span class="stat-label" data-en="Customers" data-bn="গ্রাহক">Customers</span></div>
+  </div>
+</section>
+
+<!-- ========== SEARCH BAR ========== -->
+<div class="search-section" id="products">
+  <div class="search-wrap">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" id="searchInput" placeholder="Search products..." data-en-placeholder="Search products..." data-bn-placeholder="পণ্য খুঁজুন..." oninput="searchProducts()"/>
+    <button class="clear-search" onclick="clearSearch()"><i class="fas fa-times"></i></button>
+  </div>
+</div>
+
+<!-- ========== PRODUCTS SECTION ========== -->
+<section class="section products-section">
+  <div class="section-header">
+    <h2 data-en="Our Products" data-bn="আমাদের পণ্য">Our Products</h2>
+    <p data-en="Browse our wide range of quality products" data-bn="আমাদের বিভিন্ন মানসম্পন্ন পণ্য দেখুন">Browse our wide range of quality products</p>
+  </div>
+
+  <!-- Category Filters -->
+  <div class="cat-filters" id="catFilters">
+    <button class="cat-btn active" data-cat="all" onclick="filterCat('all')" data-en="All" data-bn="সব">All</button>
+    <button class="cat-btn" data-cat="food" onclick="filterCat('food')" data-en="🍔 Food Items" data-bn="🍔 খাবার">🍔 Food Items</button>
+    <button class="cat-btn" data-cat="tools" onclick="filterCat('tools')" data-en="🔧 Tools" data-bn="🔧 যন্ত্রপাতি">🔧 Tools</button>
+    <button class="cat-btn" data-cat="plants" onclick="filterCat('plants')" data-en="🌿 Plants" data-bn="🌿 গাছপালা">🌿 Plants</button>
+    <button class="cat-btn" data-cat="electric" onclick="filterCat('electric')" data-en="⚡ Electric" data-bn="⚡ ইলেক্ট্রিক">⚡ Electric</button>
+    <button class="cat-btn" data-cat="confectionery" onclick="filterCat('confectionery')" data-en="🍰 Confectionery" data-bn="🍰 মিষ্টান্ন">🍰 Confectionery</button>
+    <button class="cat-btn" data-cat="coffee" onclick="filterCat('coffee')" data-en="☕ Coffee" data-bn="☕ কফি">☕ Coffee</button>
+    <button class="cat-btn" data-cat="grocery" onclick="filterCat('grocery')" data-en="🛒 Grocery" data-bn="🛒 মুদিখানা">🛒 Grocery</button>
+    <button class="cat-btn" data-cat="pharmacy" onclick="filterCat('pharmacy')" data-en="💊 Pharmacy" data-bn="💊 ঔষধ">💊 Pharmacy</button>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="products-grid" id="productsGrid"></div>
+  <div class="no-results" id="noResults" style="display:none">
+    <i class="fas fa-search"></i>
+    <p data-en="No products found." data-bn="কোনো পণ্য পাওয়া যায়নি।">No products found.</p>
+  </div>
+
+  <!-- Send All via WhatsApp -->
+  <div class="send-all-wrap">
+    <button class="send-all-btn" onclick="sendAllWhatsApp()" data-en="📦 Send All Selected via WhatsApp" data-bn="📦 সব নির্বাচিত পণ্য WhatsApp-এ পাঠান">📦 Send All Selected via WhatsApp</button>
+  </div>
+</section>
+
+<!-- ========== SERVICES SECTION ========== -->
+<section class="section services-section" id="services">
+  <div class="section-header">
+    <h2 data-en="Our Services" data-bn="আমাদের সেবা">Our Services</h2>
+    <p data-en="Professional services at your doorstep" data-bn="আপনার দরজায় পেশাদার সেবা">Professional services at your doorstep</p>
+  </div>
+  <div class="services-grid" id="servicesGrid"></div>
+</section>
+
+<!-- ========== CART SECTION ========== -->
+<section class="section cart-section" id="cart">
+  <div class="section-header">
+    <h2 data-en="🛒 Your Cart" data-bn="🛒 আপনার কার্ট">🛒 Your Cart</h2>
+  </div>
+  <div class="cart-summary">
+    <div class="cart-stat">
+      <span class="cstat-label" data-en="Total Products" data-bn="মোট পণ্য">Total Products</span>
+      <span class="cstat-val" id="totalProducts">0</span>
+    </div>
+    <div class="cart-stat">
+      <span class="cstat-label" data-en="Total Items" data-bn="মোট আইটেম">Total Items</span>
+      <span class="cstat-val" id="totalItems">0</span>
+    </div>
+    <div class="cart-stat highlight">
+      <span class="cstat-label" data-en="Total Price" data-bn="মোট মূল্য">Total Price</span>
+      <span class="cstat-val" id="totalPrice">৳0</span>
+    </div>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <i class="fas fa-cart-plus"></i>
+      <p data-en="Your cart is empty. Start shopping!" data-bn="আপনার কার্ট খালি। কেনাকাটা শুরু করুন!">Your cart is empty. Start shopping!</p>
+    </div>
+  </div>
+  <div class="cart-actions" id="cartActions" style="display:none">
+    <button class="btn-primary" onclick="checkoutWhatsApp()" data-en="✅ Checkout via WhatsApp" data-bn="✅ WhatsApp-এ চেকআউট করুন">✅ Checkout via WhatsApp</button>
+    <button class="btn-danger" onclick="clearCart()" data-en="🗑 Clear Cart" data-bn="🗑 কার্ট পরিষ্কার করুন">🗑 Clear Cart</button>
+  </div>
+</section>
+
+<!-- ========== CONTACT / COMPLAINT SECTION ========== -->
+<section class="section contact-section" id="contact">
+  <div class="section-header">
+    <h2 data-en="Contact & Complaint" data-bn="যোগাযোগ ও অভিযোগ">Contact & Complaint</h2>
+    <p data-en="We value your feedback — we'll respond within 24 hours" data-bn="আমরা আপনার মতামত মূল্যায়ন করি — ২৪ ঘণ্টার মধ্যে সাড়া দেব">We value your feedback — we'll respond within 24 hours</p>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-form-box">
+      <div class="form-group">
+        <label data-en="Your Name" data-bn="আপনার নাম">Your Name</label>
+        <input type="text" id="contactName" placeholder="Enter your name" data-en-placeholder="Enter your name" data-bn-placeholder="আপনার নাম লিখুন"/>
+      </div>
+      <div class="form-group">
+        <label data-en="Phone / WhatsApp" data-bn="ফোন / WhatsApp">Phone / WhatsApp</label>
+        <input type="text" id="contactPhone" placeholder="01XXXXXXXXX" />
+      </div>
+      <div class="form-group">
+        <label data-en="Message / Complaint" data-bn="বার্তা / অভিযোগ">Message / Complaint</label>
+        <textarea id="contactMsg" rows="4" placeholder="Write your message or complaint here..." data-en-placeholder="Write your message or complaint here..." data-bn-placeholder="এখানে আপনার বার্তা বা অভিযোগ লিখুন..."></textarea>
+      </div>
+      <button class="btn-primary full-btn" onclick="submitComment()" data-en="📨 Submit" data-bn="📨 জমা দিন">📨 Submit</button>
+    </div>
+    <div class="comments-box" id="commentsBox">
+      <h3 data-en="Recent Comments" data-bn="সাম্প্রতিক মন্তব্য">Recent Comments</h3>
+      <div id="commentsList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+      <span data-en="ELECTRO SHOP" data-bn="ইলেক্ট্রো শপ">ELECTRO SHOP</span>
+    </div>
+    <p data-en="© 2025 ELECTRO SHOP. All rights reserved." data-bn="© ২০২৫ ইলেক্ট্রো শপ। সর্বস্বত্ব সংরক্ষিত।">© 2025 ELECTRO SHOP. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/8801XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://m.me/yourpageusername" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== FLOATING CART PANEL ========== -->
+<div class="floating-cart" id="floatingCart">
+  <div class="fc-inner" onclick="scrollToCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <div class="fc-info">
+      <span id="fcItems">0 items</span>
+      <span id="fcPrice">৳0</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
