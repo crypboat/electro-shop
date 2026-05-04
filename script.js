@@ -1,4 +1,4 @@
-/* ===== ELECTRO SHOP — script.js ===== */
+ /* ===== ELECTRO SHOP — script.js ===== */
 
 // ── CONFIG ──────────────────────────────────────────────
 const WHATSAPP_NUMBER = '8801968025755';
@@ -373,7 +373,7 @@ function orderWhatsApp(id) {
 }
 
 function orderMessenger(id) {
-  window.open('[https://m.me/abdullah.binusuf.96](https://m.me/abdullah.binusuf.96)', '_blank')
+  window.open('https://m.me/abdullah.binusuf.96', '_blank');
 }
 
 function serviceWhatsApp(serviceName) {
@@ -382,7 +382,7 @@ function serviceWhatsApp(serviceName) {
 }
 
 function serviceMessenger() {
-  window.open('[https://m.me/abdullah.binusuf.96](https://m.me/abdullah.binusuf.96)', '_blank')
+  window.open('https://m.me/abdullah.binusuf.96', '_blank');
 }
 
 function sendAllWhatsApp() {
