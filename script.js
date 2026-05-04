@@ -1,8 +1,8 @@
 /* ===== ELECTRO SHOP — script.js ===== */
 
 // ── CONFIG ──────────────────────────────────────────────
-const WHATSAPP_NUMBER = '8801700000000';
-const MESSENGER_PAGE  = 'yourpageusername';
+const WHATSAPP_NUMBER = '8801968025755';
+const MESSENGER_PAGE  = 'https://m.me/abdullah.binusuf.96';
 const LANG = { current: 'en' };
 
 // ── PRODUCT DATA ─────────────────────────────────────────
