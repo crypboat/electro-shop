@@ -369,20 +369,20 @@ function orderWhatsApp(id) {
   const name = l === 'bn' ? product.nameBn : product.name;
   const del  = s.delivery === 'home' ? 'Home Delivery' : 'Office Delivery';
   const msg  = `Hello ELECTRO SHOP! 👋\n\nI want to order:\n📦 Product: ${name}\n💰 Price: ৳${product.price} x ${s.qty} = ৳${product.price * s.qty}\n🚚 Delivery: ${del}\n\nPlease confirm my order. Thank you!`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  window.open(`https://wa.me/qr/BGTPIGL7YP7TA1${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 function orderMessenger(id) {
-  window.open(`https://m.me/${MESSENGER_PAGE}`, '_blank');
+  window.open('[https://m.me/abdullah.binusuf.96](https://m.me/abdullah.binusuf.96)', '_blank')
 }
 
 function serviceWhatsApp(serviceName) {
   const msg = `Hello ELECTRO SHOP! 👋\n\nI need a ${serviceName} service.\n\nPlease contact me to book an appointment. Thank you!`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  window.open(`https://wa.me/qr/BGTPIGL7YP7TA1${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 function serviceMessenger() {
-  window.open(`https://m.me/${MESSENGER_PAGE}`, '_blank');
+  window.open('[https://m.me/abdullah.binusuf.96](https://m.me/abdullah.binusuf.96)', '_blank')
 }
 
 function sendAllWhatsApp() {
