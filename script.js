@@ -26,7 +26,7 @@ const PRODUCTS = [
   { id:12, name:'Cactus',         nameBn:'ক্যাকটাস',         cat:'plants', price:150, emoji:'🌵' },
 
   // ELECTRIC
-  { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electric', price:80,  emoji:'💡', badge:'Hot' },
+  { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electric', price:80,  emoji:'💡', badge:'Hot', image:'pic/bulb.jpg'},
   { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'electric', price:350, emoji:'🔌' },
   { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'electric', price:680, emoji:'⚡', badge:'New' },
   { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electric', price:2800, emoji:'🌀', badge:'Best' },
