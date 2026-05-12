@@ -140,7 +140,7 @@ function renderProducts() {
 
     card.innerHTML = `
       <div class="product-img-wrap">
-        <div class="product-emoji-img" style="height:160px; overflow:hidden;">${p.image ? `<img src="${p.image}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">` : p.emoji}</div>
+        <div class="product-emoji-img" style="height:160px; overflow:hidden;">${p.image ? <img src="${p.image}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"> : p.emoji}</div>
         <div class="product-emoji-img">
         ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ''}
         <div class="select-check ${isSelected ? 'checked' : ''}" onclick="toggleSelect(${p.id})" title="Select for bulk order">
