@@ -66,7 +66,7 @@ const SERVICES = [
 ];
 
 // ── STATE ─────────────────────────────────────────────────
-let cart      = [];
+let cart = JSON.parse(localStorage.getItem('electro_cart')) || [];
 let selected  = {}; // productId → { qty, delivery }
 let activeFilter = 'all';
 let searchTerm   = '';
@@ -140,7 +140,11 @@ function renderProducts() {
 
     card.innerHTML = `
       <div class="product-img-wrap">
-        <div class="product-emoji-img" style="height:160px; overflow:hidden;">${p.image ? `<img src="${p.image}" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">` : p.emoji}</div>
+        <div class="product-emoji-img" style="height:160px; overflow:hidden;">
+        ${p.image
+          ? `<img src="${p.image}" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">` 
+          : p.emoji}
+        </div>
         <div class="product-emoji-img">
         ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ''}
         <div class="select-check ${isSelected ? 'checked' : ''}" onclick="toggleSelect(${p.id})" title="Select for bulk order">
@@ -370,7 +374,7 @@ function orderWhatsApp(id) {
   const name = l === 'bn' ? product.nameBn : product.name;
   const del  = s.delivery === 'home' ? 'Home Delivery' : 'Office Delivery';
   const msg  = `Hello ELECTRO SHOP! 👋\n\nI want to order:\n📦 Product: ${name}\n💰 Price: ৳${product.price} x ${s.qty} = ৳${product.price * s.qty}\n🚚 Delivery: ${del}\n\nPlease confirm my order. Thank you!`;
-  window.open(`https://wa.me/qr/BGTPIGL7YP7TA1${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 function orderMessenger(id) {
@@ -379,7 +383,7 @@ function orderMessenger(id) {
 
 function serviceWhatsApp(serviceName) {
   const msg = `Hello ELECTRO SHOP! 👋\n\nI need a ${serviceName} service.\n\nPlease contact me to book an appointment. Thank you!`;
-  window.open(`https://wa.me/qr/BGTPIGL7YP7TA1${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 function serviceMessenger() {
