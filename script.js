@@ -304,15 +304,20 @@ function addToCart(id) {
 
 function removeFromCart(id) {
   cart = cart.filter(c => c.id !== id);
-  updateCartUI();
+ saveCart(); 
+ updateCartUI();
 }
+
+function saveCart(){
+ localStorage.setItem('electro_cart',JSON.stringify(cart));
 
 function clearCart() {
   cart = [];
+  saveCart();
   updateCartUI();
   showToast(LANG.current === 'bn' ? '🗑 কার্ট খালি হয়েছে' : '🗑 Cart cleared');
 }
-
+ 
 function updateCartUI() {
   const totalProducts = cart.length;
   const totalItems    = cart.reduce((sum, c) => sum + c.qty, 0);
