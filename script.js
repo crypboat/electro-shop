@@ -388,7 +388,7 @@ function orderWhatsApp(id) {
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
-function orderMessenger(id) {
+function orderMessenger() {
   window.open('https://m.me/abdullah.binusuf.96', '_blank');
 }
 
