@@ -308,10 +308,16 @@ function addToCart(id) {
 }
 
 function removeFromCart(id) {
- cart = cart.filter(c => c.id !== id);
- updateCartUI();
- saveCart();
- showToast(...);
+  cart = cart.filter(c => c.id !== id);
+
+  saveCart();
+  updateCartUI();
+
+  showToast(
+    LANG.current === 'bn'
+      ? '🗑 পণ্য সরানো হয়েছে'
+      : '🗑 Item removed'
+  );
 }
 
 function saveCart(){
