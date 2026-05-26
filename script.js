@@ -389,7 +389,7 @@ function orderWhatsApp(id) {
 }
 
 function orderMessenger() {
-  window.open('https://m.me/abdullah.binusuf.96', '_blank');
+  window.open(MESSENGER_PAGE, '_blank');
 }
 
 function serviceWhatsApp(serviceName) {
