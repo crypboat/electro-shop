@@ -303,9 +303,10 @@ function addToCart(id) {
 }
 
 function removeFromCart(id) {
-  cart = cart.filter(c => c.id !== id);
- saveCart(); 
+ cart = cart.filter(c => c.id !== id);
  updateCartUI();
+ saveCart();
+ showToast(...);
 }
 
 function saveCart(){
