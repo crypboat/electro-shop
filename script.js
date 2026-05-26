@@ -261,6 +261,7 @@ function changeQty(id, delta) {
   const cartItem = cart.find(c => c.id === id);
   if (cartItem) {
     cartItem.qty = s.qty;
+    saveCart();
     updateCartUI();
   }
 }
@@ -274,7 +275,11 @@ function setDelivery(id, type) {
   if (office) office.classList.toggle('selected', type === 'office');
   // Update cart if in cart
   const cartItem = cart.find(c => c.id === id);
-  if (cartItem) { cartItem.delivery = type; updateCartUI(); }
+  if (cartItem) { 
+   cartItem.delivery = type;
+   saveCart();
+   updateCartUI(); 
+  }
 }
 
 // ── TOGGLE SELECT (for bulk WhatsApp) ────────────────────
