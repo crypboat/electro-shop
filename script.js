@@ -310,6 +310,7 @@ function removeFromCart(id) {
 
 function saveCart(){
  localStorage.setItem('electro_cart',JSON.stringify(cart));
+}
 
 function clearCart() {
   cart = [];
