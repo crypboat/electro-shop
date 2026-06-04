@@ -29,7 +29,7 @@ const PRODUCTS = [
   { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electric', price:110, badge:'Hot', image:'pic/light-bulb.jpg' },
   { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'electric', price:350, emoji:'🔌' },
   { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'electric', price:680, emoji:'⚡', badge:'New' },
-  { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electric', price:2800, emoji:'🌀', badge:'Best' },
+  { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electric', price:2800, badge:'Best', image:'pic/cyling fan1.jpeg' },
 
   // CONFECTIONERY
   { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'confectionery', price:120, emoji:'🎂', badge:'Popular' },
