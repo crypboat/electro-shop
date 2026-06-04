@@ -21,8 +21,8 @@ const PRODUCTS = [
 
   // PLANTS
   { id:9,  name:'Money Plant',    nameBn:'মানি প্ল্যান্ট',   cat:'plants', price:120, emoji:'🪴', badge:'Popular' },
-  { id:10, name:'Rose Bush',      nameBn:'গোলাপ গাছ',        cat:'plants', price:200, emoji:'🌹' },
-  { id:11, name:'Bonsai Tree',    nameBn:'বনসাই গাছ',        cat:'plants', price:1800, emoji:'🌳', badge:'Premium' },
+  { id:10, name:'Rose Bush',      nameBn:'গোলাপ গাছ',        cat:'plants', price:70, emoji:'🌹' },
+  { id:11, name:'Bonsai Tree',    nameBn:'বনসাই গাছ',        cat:'plants', price:300, emoji:'🌳', badge:'Premium' },
   { id:12, name:'Cactus',         nameBn:'ক্যাকটাস',         cat:'plants', price:150, emoji:'🌵' },
 
   // ELECTRIC
@@ -32,25 +32,25 @@ const PRODUCTS = [
   { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electric', price:2800, emoji:'🌀', badge:'Best' },
 
   // CONFECTIONERY
-  { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'confectionery', price:650, emoji:'🎂', badge:'Popular' },
-  { id:18, name:'Misti Doi',        nameBn:'মিষ্টি দই',       cat:'confectionery', price:80,  emoji:'🍮' },
+  { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'confectionery', price:120, emoji:'🎂', badge:'Popular' },
+  { id:18, name:'Misti Doi',        nameBn:'মিষ্টি দই',       cat:'confectionery', price:230,  emoji:'🍮' },
   { id:19, name:'Rasogolla Box',    nameBn:'রসগোল্লা বক্স',  cat:'confectionery', price:250, emoji:'🍡' },
   { id:20, name:'Chocolate Bar',    nameBn:'চকোলেট বার',      cat:'confectionery', price:45,  emoji:'🍫' },
 
   // COFFEE
   { id:21, name:'Espresso (Single)', nameBn:'এসপ্রেসো',        cat:'coffee', price:80,  emoji:'☕', badge:'Hot' },
-  { id:22, name:'Cappuccino',        nameBn:'ক্যাপুচিনো',      cat:'coffee', price:120, emoji:'🫖' },
-  { id:23, name:'Cold Brew',         nameBn:'কোল্ড ব্রু',      cat:'coffee', price:150, emoji:'🧊', badge:'New' },
-  { id:24, name:'Caramel Latte',     nameBn:'ক্যারামেল লাটে',  cat:'coffee', price:160, emoji:'🧇' },
+  { id:22, name:'Cappuccino',        nameBn:'ক্যাপুচিনো',      cat:'coffee', price:000, emoji:'🫖' },
+  { id:23, name:'Cold Brew',         nameBn:'কোল্ড ব্রু',      cat:'coffee', price:000, emoji:'🧊', badge:'New' },
+  { id:24, name:'Caramel Latte',     nameBn:'ক্যারামেল লাটে',  cat:'coffee', price:000, emoji:'🧇' },
 
   // GROCERY
-  { id:25, name:'Basmati Rice 5kg',  nameBn:'বাসমতি চাল ৫কেজি', cat:'grocery', price:420, emoji:'🌾', badge:'Best' },
-  { id:26, name:'Mustard Oil 1L',    nameBn:'সরিষার তেল ১লি',   cat:'grocery', price:180, emoji:'🫙' },
-  { id:27, name:'Dal (Lentil) 1kg',  nameBn:'মসুর ডাল ১কেজি',  cat:'grocery', price:130, emoji:'🫘' },
-  { id:28, name:'Sugar 1kg',         nameBn:'চিনি ১কেজি',       cat:'grocery', price:95,  emoji:'🍬' },
+  { id:25, name:'Basmati Rice 5kg',  nameBn:'বাসমতি চাল ৫কেজি', cat:'grocery', price:620, emoji:'🌾', badge:'Best' },
+  { id:26, name:'Mustard Oil 1L',    nameBn:'সরিষার তেল ১লি',   cat:'grocery', price:230, emoji:'🫙' },
+  { id:27, name:'Dal (Lentil) 1kg',  nameBn:'মসুর ডাল ১কেজি',  cat:'grocery', price:180, emoji:'🫘' },
+  { id:28, name:'Sugar 1kg',         nameBn:'চিনি ১কেজি',       cat:'grocery', price:120,  emoji:'🍬' },
 
   // PHARMACY
-  { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'pharmacy', price:5,   emoji:'💊', badge:'OTC' },
+  { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'pharmacy', price:20,   emoji:'💊', badge:'OTC' },
   { id:30, name:'Vitamin C Tablet',  nameBn:'ভিটামিন সি ট্যাবলেট',     cat:'pharmacy', price:120, emoji:'🔴' },
   { id:31, name:'First Aid Kit',     nameBn:'ফার্স্ট এইড কিট',         cat:'pharmacy', price:350, emoji:'🩹', badge:'Essential' },
   { id:32, name:'Hand Sanitizer',    nameBn:'হ্যান্ড স্যানিটাইজার',      cat:'pharmacy', price:85,  emoji:'🧴' },
