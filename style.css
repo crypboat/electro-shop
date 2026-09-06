@@ -185,12 +185,13 @@ body.bn { font-family: var(--font-bn); }
   text-align: center;
   padding: 80px 24px 120px;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('pic/cover.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('./pic/cover.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/*
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -200,6 +201,7 @@ body.bn { font-family: var(--font-bn); }
     radial-gradient(ellipse at 50% 80%, rgba(0,255,136,0.08) 0%, transparent 50%);
   animation: bgPulse 8s ease-in-out infinite alternate;
 }
+*/
 
 .hero-bg::after {
   content: '';
