@@ -185,10 +185,10 @@ body.bn { font-family: var(--font-bn); }
   text-align: center;
   padding: 80px 24px 120px;
   overflow: hidden;
-  background-image: linear-gradint(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('pic/cover.jpg');
-  kground-size: cover;
-  kground-position: center;
-  kground-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('pic/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-bg {
