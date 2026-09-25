@@ -132,7 +132,6 @@ function renderProducts() {
     const del = selected[p.id]?.delivery || 'home';
     const l = LANG.current;
     const displayName = l === 'bn' ? p.nameBn : p.name;
-    const inCart = cart.some(c => c.id === p.id); // NEW: is this product currently in the cart?
 
     const card = document.createElement('div');
     card.className = `product-card${isSelected ? ' selected' : ''}`;
@@ -186,7 +185,7 @@ function renderProducts() {
             <i class="fas fa-cart-plus"></i>
             ${l === 'bn' ? 'কার্টে যোগ করুন' : 'Add to Cart'}
           </button>
-          ${inCart ? `
+          
           <div class="product-btns-row">
             <button class="btn-whatsapp" onclick="orderWhatsApp(${p.id})">
               <i class="fab fa-whatsapp"></i> WhatsApp
@@ -195,7 +194,7 @@ function renderProducts() {
               <i class="fab fa-facebook-messenger"></i> Messenger
             </button>
           </div>
-          ` : ''} 
+         
         </div>
       </div>
     `;
