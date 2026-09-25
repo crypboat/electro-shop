@@ -2,8 +2,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #fff0f5;
-  --bg2: #fde8ed;
+  --bg: #EBB8DD;
+  --bg2: #d49137;
   --bg3: #f0f2f5;
   --card: #ffffff;
   --card2: #ffffff;
