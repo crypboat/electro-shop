@@ -186,7 +186,7 @@ function renderProducts() {
             <i class="fas fa-cart-plus"></i>
             ${l === 'bn' ? 'কার্টে যোগ করুন' : 'Add to Cart'}
           </button>
-          $ {inCart ?`               //New chang......
+          ${inCart ? `
           <div class="product-btns-row">
             <button class="btn-whatsapp" onclick="orderWhatsApp(${p.id})">
               <i class="fab fa-whatsapp"></i> WhatsApp
@@ -195,7 +195,7 @@ function renderProducts() {
               <i class="fab fa-facebook-messenger"></i> Messenger
             </button>
           </div>
-          ` : ''}                   //New chang....... 
+          ` : ''} 
         </div>
       </div>
     `;
