@@ -132,6 +132,7 @@ function renderProducts() {
     const del = selected[p.id]?.delivery || 'home';
     const l = LANG.current;
     const displayName = l === 'bn' ? p.nameBn : p.name;
+    const inCart = cart.some(c => c.id === p.id); // NEW: is this product currently in the cart?
 
     const card = document.createElement('div');
     card.className = `product-card${isSelected ? ' selected' : ''}`;
