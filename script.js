@@ -150,9 +150,13 @@ function renderProducts() {
           ? `<div class="product-badge">${p.badge}</div>`
           : ''}
         </div>
+        
+        <!--
         <div class="select-check ${isSelected ? 'checked' : ''}" onclick="toggleSelect(${p.id})" title="Select for bulk order">
           ${isSelected ? '<i class="fas fa-check"></i>' : ''}
         </div>
+        -->
+        
       </div>
       <div class="product-body">
         <div class="product-cat">${p.cat.toUpperCase()}</div>
