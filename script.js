@@ -185,6 +185,7 @@ function renderProducts() {
             <i class="fas fa-cart-plus"></i>
             ${l === 'bn' ? 'কার্টে যোগ করুন' : 'Add to Cart'}
           </button>
+          $ {inCart ?`               //New chang......
           <div class="product-btns-row">
             <button class="btn-whatsapp" onclick="orderWhatsApp(${p.id})">
               <i class="fab fa-whatsapp"></i> WhatsApp
@@ -193,6 +194,7 @@ function renderProducts() {
               <i class="fab fa-facebook-messenger"></i> Messenger
             </button>
           </div>
+          ` : ''}                   //New chang....... 
         </div>
       </div>
     `;
@@ -306,7 +308,9 @@ function addToCart(id) {
   } else {
     cart.push({ ...product, qty: s.qty, delivery: s.delivery });
   }
+  saveCart();
   updateCartUI();
+  renderProducts(); // NEW: re-render so this product's card now shows WhatsApp/Messenger
   showToast(`✅ ${LANG.current === 'bn' ? 'কার্টে যোগ হয়েছে!' : 'Added to cart!'}`);
 }
 
@@ -315,6 +319,8 @@ function removeFromCart(id) {
 
   saveCart();
   updateCartUI();
+  renderProducts(); // NEW: re-render so this product's card hides WhatsApp/Messenger again
+ 
 
   showToast(
     LANG.current === 'bn'
@@ -331,6 +337,7 @@ function clearCart() {
   cart = [];
   saveCart();
   updateCartUI();
+  renderProducts(); // NEW: re-render so all cards hide WhatsApp/Messenger again 
   showToast(LANG.current === 'bn' ? '🗑 কার্ট খালি হয়েছে' : '🗑 Cart cleared');
 }
  
