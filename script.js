@@ -1,4 +1,10 @@
  /* ===== ELECTRO SHOP — script.js ===== */
+function sanitizeInput(str) {
+    if (typeof str !== 'string') return str;
+    const div = document.createElement('div');
+    div.innerText = str;
+    return div.innerHTML;
+}
 
 // ── CONFIG ──────────────────────────────────────────────
 const WHATSAPP_NUMBER = '8801968025755';
