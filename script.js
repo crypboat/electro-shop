@@ -26,10 +26,10 @@ const PRODUCTS = [
   { id:12, name:'Cactus',         nameBn:'ক্যাকটাস',         cat:'plants', price:150, emoji:'🌵' },
 
   // ELECTRIC
-  { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electric', price:110, badge:'Hot', image:'pic/light-bulb.jpg' },
-  { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'electric', price:350, emoji:'🔌' },
-  { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'electric', price:680, emoji:'⚡', badge:'New' },
-  { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electric', price:2800, badge:'Best', image:'pic/cyling fan1.jpeg' },
+  { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electronic', price:110, badge:'Hot', image:'pic/light-bulb.jpg' },
+  { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'electronic', price:350, emoji:'🔌' },
+  { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'electronic', price:680, emoji:'⚡', badge:'New' },
+  { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electronic', price:2800, badge:'Best', image:'pic/cyling fan1.jpeg' },
 
   // CONFECTIONERY
   { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'confectionery', price:120, emoji:'🎂', badge:'Popular' },
@@ -38,10 +38,10 @@ const PRODUCTS = [
   { id:20, name:'Chocolate Bar',    nameBn:'চকোলেট বার',      cat:'confectionery', price:45,  emoji:'🍫' },
 
   // COFFEE
-  { id:21, name:'Espresso (Single)', nameBn:'এসপ্রেসো',        cat:'coffee', price:80,  emoji:'☕', badge:'Hot' },
-  { id:22, name:'Cappuccino',        nameBn:'ক্যাপুচিনো',      cat:'coffee', price:000, emoji:'🫖' },
-  { id:23, name:'Cold Brew',         nameBn:'কোল্ড ব্রু',      cat:'coffee', price:000, emoji:'🧊', badge:'New' },
-  { id:24, name:'Caramel Latte',     nameBn:'ক্যারামেল লাটে',  cat:'coffee', price:000, emoji:'🧇' },
+  { id:21, name:'Espresso (Single)', nameBn:'এসপ্রেসো',        cat:'craft', price:80,  emoji:'☕', badge:'Hot' },
+  { id:22, name:'Cappuccino',        nameBn:'ক্যাপুচিনো',      cat:'craft', price:000, emoji:'🫖' },
+  { id:23, name:'Cold Brew',         nameBn:'কোল্ড ব্রু',      cat:'craft', price:000, emoji:'🧊', badge:'New' },
+  { id:24, name:'Caramel Latte',     nameBn:'ক্যারামেল লাটে',  cat:'craft', price:000, emoji:'🧇' },
 
   // GROCERY
   { id:25, name:'Basmati Rice 5kg',  nameBn:'বাসমতি চাল ৫কেজি', cat:'grocery', price:620, emoji:'🌾', badge:'Best' },
@@ -50,10 +50,10 @@ const PRODUCTS = [
   { id:28, name:'Sugar 1kg',         nameBn:'চিনি ১কেজি',       cat:'grocery', price:120,  emoji:'🍬' },
 
   // PHARMACY
-  { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'pharmacy', price:20,   emoji:'💊', badge:'OTC' },
-  { id:30, name:'Vitamin C Tablet',  nameBn:'ভিটামিন সি ট্যাবলেট',     cat:'pharmacy', price:120, emoji:'🔴' },
-  { id:31, name:'First Aid Kit',     nameBn:'ফার্স্ট এইড কিট',         cat:'pharmacy', price:350, emoji:'🩹', badge:'Essential' },
-  { id:32, name:'Hand Sanitizer',    nameBn:'হ্যান্ড স্যানিটাইজার',      cat:'pharmacy', price:85,  emoji:'🧴' },
+  { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'toys', price:20,   emoji:'💊', badge:'OTC' },
+  { id:30, name:'Vitamin C Tablet',  nameBn:'ভিটামিন সি ট্যাবলেট',     cat:'toys', price:120, emoji:'🔴' },
+  { id:31, name:'First Aid Kit',     nameBn:'ফার্স্ট এইড কিট',         cat:'toys', price:350, emoji:'🩹', badge:'Essential' },
+  { id:32, name:'Hand Sanitizer',    nameBn:'হ্যান্ড স্যানিটাইজার',      cat:'toys', price:85,  emoji:'🧴' },
 ];
 
 // ── SERVICE DATA ──────────────────────────────────────────
