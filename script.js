@@ -50,10 +50,10 @@ const PRODUCTS = [
   { id:28, name:'Sugar 1kg',         nameBn:'চিনি ১কেজি',       cat:'grocery', price:120,  emoji:'🍬' },
 
   // PHARMACY
-  { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'toys', price:20,   emoji:'💊', badge:'OTC' },
-  { id:30, name:'Vitamin C Tablet',  nameBn:'ভিটামিন সি ট্যাবলেট',     cat:'toys', price:120, emoji:'🔴' },
-  { id:31, name:'First Aid Kit',     nameBn:'ফার্স্ট এইড কিট',         cat:'toys', price:350, emoji:'🩹', badge:'Essential' },
-  { id:32, name:'Hand Sanitizer',    nameBn:'হ্যান্ড স্যানিটাইজার',      cat:'toys', price:85,  emoji:'🧴' },
+  { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'Toys', price:20,   emoji:'💊', badge:'OTC' },
+  { id:30, name:'Vitamin C Tablet',  nameBn:'ভিটামিন সি ট্যাবলেট',     cat:'Toys', price:120, emoji:'🔴' },
+  { id:31, name:'First Aid Kit',     nameBn:'ফার্স্ট এইড কিট',         cat:'Toys', price:350, emoji:'🩹', badge:'Essential' },
+  { id:32, name:'Hand Sanitizer',    nameBn:'হ্যান্ড স্যানিটাইজার',      cat:'Toys', price:85,  emoji:'🧴' },
 ];
 
 // ── SERVICE DATA ──────────────────────────────────────────
