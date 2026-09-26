@@ -252,8 +252,9 @@ function filterCat(cat) {
 }
 
 function searchProducts() {
-  searchTerm = document.getElementById('searchInput').value;
-  renderProducts();
+    const rawValue = document.getElementById('searchInput').value;
+    searchTerm = sanitizeInput(rawValue);
+    renderProducts();
 }
 
 function clearSearch() {
