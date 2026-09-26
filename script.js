@@ -26,10 +26,10 @@ const PRODUCTS = [
   { id:12, name:'Cactus',         nameBn:'ক্যাকটাস',         cat:'plants', price:150, emoji:'🌵' },
 
   // ELECTRIC
-  { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'Electronic', price:110, badge:'Hot', image:'pic/light-bulb.jpg' },
-  { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'Electronic', price:350, emoji:'🔌' },
-  { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'Electronic', price:680, emoji:'⚡', badge:'New' },
-  { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'Electronic', price:2800, badge:'Best', image:'pic/cyling fan1.jpeg' },
+  { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electronic', price:110, badge:'Hot', image:'pic/light-bulb.jpg' },
+  { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'electronic', price:350, emoji:'🔌' },
+  { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'electronic', price:680, emoji:'⚡', badge:'New' },
+  { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electronic', price:2800, badge:'Best', image:'pic/cyling fan1.jpeg' },
 
   // CONFECTIONERY
   { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'confectionery', price:120, emoji:'🎂', badge:'Popular' },
