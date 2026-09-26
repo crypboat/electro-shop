@@ -25,19 +25,19 @@ const PRODUCTS = [
   { id:11, name:'Bonsai Tree',    nameBn:'বনসাই গাছ',        cat:'plants', price:300, emoji:'🌳', badge:'Premium' },
   { id:12, name:'Cactus',         nameBn:'ক্যাকটাস',         cat:'plants', price:150, emoji:'🌵' },
 
-  // ELECTRIC
+  // ELECTRONIC
   { id:13, name:'LED Bulb 9W',      nameBn:'LED বাল্ব ৯ওয়াট', cat:'electronic', price:110, badge:'Hot', image:'pic/light-bulb.jpg' },
   { id:14, name:'Power Extension',  nameBn:'পাওয়ার এক্সটেনশন', cat:'electronic', price:350, emoji:'🔌' },
   { id:15, name:'USB Charger 65W',  nameBn:'USB চার্জার ৬৫W', cat:'electronic', price:680, emoji:'⚡', badge:'New' },
   { id:16, name:'Ceiling Fan',      nameBn:'সিলিং ফ্যান',    cat:'electronic', price:2800, badge:'Best', image:'pic/cyling fan1.jpeg' },
 
-  // CONFECTIONERY
-  { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'confectionery', price:120, emoji:'🎂', badge:'Popular' },
-  { id:18, name:'Misti Doi',        nameBn:'মিষ্টি দই',       cat:'confectionery', price:230,  emoji:'🍮' },
-  { id:19, name:'Rasogolla Box',    nameBn:'রসগোল্লা বক্স',  cat:'confectionery', price:250, emoji:'🍡' },
-  { id:20, name:'Chocolate Bar',    nameBn:'চকোলেট বার',      cat:'confectionery', price:45,  emoji:'🍫' },
+  // CLOTH
+  { id:17, name:'Chocolate Cake',   nameBn:'চকোলেট কেক',     cat:'cloth', price:120, emoji:'🎂', badge:'Popular' },
+  { id:18, name:'Misti Doi',        nameBn:'মিষ্টি দই',       cat:'cloth', price:230,  emoji:'🍮' },
+  { id:19, name:'Rasogolla Box',    nameBn:'রসগোল্লা বক্স',  cat:'cloth', price:250, emoji:'🍡' },
+  { id:20, name:'Chocolate Bar',    nameBn:'চকোলেট বার',      cat:'cloth', price:45,  emoji:'🍫' },
 
-  // COFFEE
+  // CRAFT
   { id:21, name:'Espresso (Single)', nameBn:'এসপ্রেসো',        cat:'craft', price:80,  emoji:'☕', badge:'Hot' },
   { id:22, name:'Cappuccino',        nameBn:'ক্যাপুচিনো',      cat:'craft', price:000, emoji:'🫖' },
   { id:23, name:'Cold Brew',         nameBn:'কোল্ড ব্রু',      cat:'craft', price:000, emoji:'🧊', badge:'New' },
@@ -49,7 +49,7 @@ const PRODUCTS = [
   { id:27, name:'Dal (Lentil) 1kg',  nameBn:'মসুর ডাল ১কেজি',  cat:'grocery', price:180, emoji:'🫘' },
   { id:28, name:'Sugar 1kg',         nameBn:'চিনি ১কেজি',       cat:'grocery', price:120,  emoji:'🍬' },
 
-  // PHARMACY
+  // TOYS
   { id:29, name:'Paracetamol 500mg', nameBn:'প্যারাসিটামল ৫০০মিগ্রা', cat:'Toys', price:20,   emoji:'💊', badge:'OTC' },
   { id:30, name:'Vitamin C Tablet',  nameBn:'ভিটামিন সি ট্যাবলেট',     cat:'Toys', price:120, emoji:'🔴' },
   { id:31, name:'First Aid Kit',     nameBn:'ফার্স্ট এইড কিট',         cat:'Toys', price:350, emoji:'🩹', badge:'Essential' },
