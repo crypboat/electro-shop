@@ -14,7 +14,7 @@ const LANG = { current: 'en' };
 // ── PRODUCT DATA ─────────────────────────────────────────
 const PRODUCTS = [
   // FOOD
-  { id:1, name:'Chicken Biryani', nameBn:'চিকেন বিরিয়ানি', cat:'food', price:180, emoji:'🍛', badge:'Popular' },
+  { id:1, name:'Chicken Biryani', nameBn:'চিকেন বিরিয়ানি', cat:'food', price:180, emoji:'🍛', badge:'Popular', desc:"স্পেশাল বাসমতি চালের মোরগ পোলাও, সাথে ডিম ও সালাদ।" },
   { id:2, name:'Beef Burger',     nameBn:'বিফ বার্গার',     cat:'food', price:120, emoji:'🍔', badge:'Hot' },
   { id:3, name:'Vegetable Roll',  nameBn:'সবজি রোল',        cat:'food', price:60,  emoji:'🌯' },
   { id:4, name:'Fruit Salad',     nameBn:'ফ্রুট সালাদ',     cat:'food', price:80,  emoji:'🥗' },
