@@ -202,7 +202,19 @@
 
 <!-- ========== TOAST ========== -->
 <div class="toast" id="toast"></div>
-
+<!-- ================= PRODUCT DETAILS MODAL ================= -->
+<div id="product-modal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <button id="close-modal-btn" class="close-btn" onclick="closeModal()">&times;</button>
+    <div class="modal-body">
+      <div id="modal-emoji" class="modal-emoji"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <div id="modal-price" class="modal-price"></div>
+      <button id="modal-add-btn" class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
