@@ -535,25 +535,71 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 // ================= PRODUCT DETAILS MODAL LOGIC ================= //
 
 // ১. প্রোডাক্টের বিস্তারিত পপআপ খোলার ফাংশন
+
 function openProductDetails(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
+  // ১. প্রোডাক্ট ডাটা খুঁজে নেওয়া
+  const product = products.find(p => p.id === productId);
   if (!product) return;
 
-  document.getElementById('modal-emoji').innerText = product.emoji || '📦';
-  document.getElementById('modal-title').innerText = product.nameBn || product.name;
-  document.getElementById('modal-desc').innerText = product.desc || "কোনো বিবরণ পাওয়া যায়নি।";
-  document.getElementById('modal-price').innerText = "৳" + product.price;
+  // ২. পপআপের এলিমেন্টগুলো সিলেক্ট করা
+  const modal = document.getElementById('product-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalPrice = document.getElementById('modal-price');
+  const modalQtyInput = document.getElementById('modal-qty-input');
+  const modalAddBtn = document.getElementById('modal-add-btn');
 
-  // Add to Cart বাটনে ফাংশন যুক্ত করা
-  const addBtn = document.getElementById('modal-add-btn');
-  addBtn.onclick = function() {
-    if (typeof addToCart === 'function') {
-      addToCart(product.id);
+  // ৩. প্রোডাক্টের তথ্য পপআপে বসানো
+  if (modalImg) modalImg.innerHTML = <span style="font-size: 50px;">${product.image || '📦'}</span>;
+  if (modalTitle) modalTitle.innerText = product.name;
+  if (modalPrice) modalPrice.innerText = ৳${product.price};
+
+  // বিবরণ সেট করা (বাংলা ও ইংরেজি সাপোর্ট সহ)
+  if (modalDesc) {
+    const descEn = product.descEn || 'No description available';
+    const descBn = product.descBn || 'কোনো বিবরণ পাওয়া যায়নি';
+    modalDesc.setAttribute('data-en', descEn);
+    modalDesc.setAttribute('data-bn', descBn);
+    modalDesc.innerText = (currentLang === 'bn') ? descBn : descEn;
+  }
+
+  // ৪. [পরিমাণ সিঙ্ক] কার্ডে থাকা বর্তমান পরিমাণটি পপআপে বসানো
+  const cardQtyInput = document.getElementById(qty-${productId});
+  const currentQty = cardQtyInput ? parseInt(cardQtyInput.value) || 1 : 1;
+  if (modalQtyInput) {
+    modalQtyInput.value = currentQty;
+  }
+
+  // ৫. [ভাষা সিঙ্ক] পপআপের Add to Cart বাটনের টেক্সট বর্তমান ভাষা অনুযায়ী আপডেট করা
+  if (modalAddBtn) {
+    const btnTextSpan = modalAddBtn.querySelector('.btn-text');
+    if (btnTextSpan) {
+      btnTextSpan.innerText = (currentLang === 'bn') ? 'কার্টে যোগ করুন' : 'Add to Cart';
     }
-    closeModal();
-  };
+  }
 
-  document.getElementById('product-modal').classList.remove('hidden');
+  // ৬. 'Add to Cart' বাটনে ক্লিক ইভেন্ট সেটআপ
+  if (modalAddBtn) {
+    modalAddBtn.onclick = () => {
+      const finalQty = modalQtyInput ? parseInt(modalQtyInput.value) || 1 : 1;
+      
+      // কার্টে পাঠাবে এবং কার্ডের ইনপুট ফিল্ডেও পরিমাণটি আপডেট করে দেবে
+      if (typeof addToCart === 'function') {
+        addToCart(productId, finalQty);
+      }
+      if (cardQtyInput) {
+        cardQtyInput.value = finalQty;
+      }
+      
+      closeProductDetails();
+    };
+  }
+
+  // ৭. পপআপ শো করা
+  if (modal) {
+    modal.style.display = 'flex';
+  }
 }
 
 // ২. পপআপ বন্ধ করার ফাংশন
