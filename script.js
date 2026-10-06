@@ -209,6 +209,12 @@ function renderProducts() {
         </div>
       </div>
     `;
+    card.style.cursor = 'pointer';
+    card.onclick = (e) => {
+     if (!e.target.closest('button') && !e.target.closest('input') && !e.target.closest('label')) {
+       openProductDetails(p.id);
+     }
+   };
     grid.appendChild(card);
   });
 }
