@@ -1129,3 +1129,79 @@ body.bn { font-family: var(--font-bn); }
   .section { padding: 40px 16px; }
   .logo-text { font-size: 1rem; }
 }
+/* ================= PRODUCT MODAL STYLES ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+}
+
+.modal-overlay.hidden {
+  display: none !important;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  max-width: 380px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: modalPopup 0.3s ease-out;
+}
+
+@keyframes modalPopup {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 28px;
+  border: none;
+  background: none;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #ff4757;
+}
+
+.modal-emoji {
+  font-size: 65px;
+  margin-bottom: 10px;
+}
+
+#modal-title {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#modal-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.modal-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6b81;
+  margin-bottom: 15px;
+}
