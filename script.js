@@ -526,3 +526,39 @@ document.querySelectorAll('.nav-links a').forEach(a => {
     document.getElementById('navLinks').classList.remove('open');
   });
 });
+// ================= PRODUCT DETAILS MODAL LOGIC ================= //
+
+// ১. প্রোডাক্টের বিস্তারিত পপআপ খোলার ফাংশন
+function openProductDetails(productId) {
+  const product = PRODUCTS.find(p => p.id === productId);
+  if (!product) return;
+
+  document.getElementById('modal-emoji').innerText = product.emoji || '📦';
+  document.getElementById('modal-title').innerText = product.nameBn || product.name;
+  document.getElementById('modal-desc').innerText = product.desc || "কোনো বিবরণ পাওয়া যায়নি।";
+  document.getElementById('modal-price').innerText = "৳" + product.price;
+
+  // Add to Cart বাটনে ফাংশন যুক্ত করা
+  const addBtn = document.getElementById('modal-add-btn');
+  addBtn.onclick = function() {
+    if (typeof addToCart === 'function') {
+      addToCart(product.id);
+    }
+    closeModal();
+  };
+
+  document.getElementById('product-modal').classList.remove('hidden');
+}
+
+// ২. পপআপ বন্ধ করার ফাংশন
+function closeModal() {
+  document.getElementById('product-modal').classList.add('hidden');
+}
+
+// ৩. পপআপের বাইরে ফাঁকা জায়গায় ক্লিক করলে পপআপ বন্ধ হওয়া
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('product-modal');
+  if (event.target === modal) {
+    closeModal();
+  }
+});
