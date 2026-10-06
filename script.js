@@ -561,8 +561,8 @@ function openProductDetails(productId) {
   }
 
   // ৪. [পরিমাণ সিঙ্ক] কার্ডে থাকা বর্তমান পরিমাণটি পপআপে বসানো
-  const cardQtyInput = document.getElementById(qty-${productId});
-  const currentQty = cardQtyInput ? parseInt(cardQtyInput.value) || 1 : 1;
+  const cardQtyInput = document.getElementById(`qty-${productId}`);
+  const currentQty = cardQtyInput ? parseInt(cardQtyInput.textContent) || 1 : 1;
   if (modalQtyInput) {
     modalQtyInput.value = currentQty;
   }
